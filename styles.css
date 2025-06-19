@@ -50,6 +50,12 @@ body {
     font-size: 1.8rem;
 }
 
+.whatsapp-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+}
+
 .nav {
     display: flex;
     gap: 30px;
