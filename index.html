@@ -1,24 +1,150 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pudim-para-voce-landing</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PudinArt - Pudins Artesanais</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🍮</span>
+                <h1>PudinArt</h1>
+            </div>
+            <nav class="nav">
+                <a href="#home" onclick="scrollToSection('home')">Início</a>
+                <a href="#produtos" onclick="scrollToSection('produtos')">Sabores</a>
+                <a href="#contato" onclick="scrollToSection('contato')">Contato</a>
+            </nav>
+            <button class="btn-primary" onclick="scrollToSection('contato')">Peça Agora</button>
+        </div>
+    </header>
 
-    <meta property="og:title" content="pudim-para-voce-landing" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Pudins Artesanais <span class="highlight">Deliciosos</span></h2>
+                <p>Sabores únicos feitos com carinho e ingredientes selecionados.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('produtos')">Ver Sabores</button>
+                    <button class="btn-secondary" onclick="scrollToSection('contato')">Fazer Pedido</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&q=80" alt="Pudim delicioso">
+            </div>
+        </div>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Produtos -->
+    <section id="produtos" class="produtos">
+        <div class="container">
+            <h2>Nossos <span class="highlight">Sabores</span></h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80" alt="Pudim de Leite Condensado">
+                    <h3>Pudim de Leite Condensado</h3>
+                    <p>O clássico cremoso com aquele gostinho especial.</p>
+                    <div class="produto-footer">
+                        <span class="preco">R$ 25,00</span>
+                        <button class="btn-small" onclick="fazerPedido('Leite Condensado')">Pedir</button>
+                    </div>
+                </div>
+                <div class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80" alt="Pudim de Chocolate">
+                    <h3>Pudim de Chocolate</h3>
+                    <p>Intenso e cremoso, feito com chocolate premium.</p>
+                    <div class="produto-footer">
+                        <span class="preco">R$ 28,00</span>
+                        <button class="btn-small" onclick="fazerPedido('Chocolate')">Pedir</button>
+                    </div>
+                </div>
+                <div class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80" alt="Pudim de Coco">
+                    <h3>Pudim de Coco</h3>
+                    <p>Sabor tropical com coco fresco ralado.</p>
+                    <div class="produto-footer">
+                        <span class="preco">R$ 26,00</span>
+                        <button class="btn-small" onclick="fazerPedido('Coco')">Pedir</button>
+                    </div>
+                </div>
+                <div class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=400&q=80" alt="Pudim de Maracujá">
+                    <h3>Pudim de Maracujá</h3>
+                    <p>Refrescante com a acidez perfeita do maracujá.</p>
+                    <div class="produto-footer">
+                        <span class="preco">R$ 27,00</span>
+                        <button class="btn-small" onclick="fazerPedido('Maracujá')">Pedir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Entre em <span class="highlight">Contato</span></h2>
+            <div class="contato-content">
+                <div class="contato-form">
+                    <h3>Faça seu Pedido</h3>
+                    <form id="pedidoForm" onsubmit="enviarPedido(event)">
+                        <input type="text" id="nome" placeholder="Seu nome completo" required>
+                        <input type="email" id="email" placeholder="Seu e-mail" required>
+                        <input type="tel" id="telefone" placeholder="Seu telefone" required>
+                        <textarea id="mensagem" placeholder="Conte-nos sobre seu pedido (sabores, quantidade, data de entrega...)" rows="4" required></textarea>
+                        <button type="submit" class="btn-primary">Enviar Pedido</button>
+                    </form>
+                </div>
+                <div class="contato-info">
+                    <h3>Informações</h3>
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <strong>Endereço</strong>
+                            <p>Rua das Delícias, 123<br>Centro, São Paulo - SP</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📞</span>
+                        <div>
+                            <strong>Telefone</strong>
+                            <p>(11) 9 8765-4321</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">✉️</span>
+                        <div>
+                            <strong>E-mail</strong>
+                            <p>contato@pudinart.com.br</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <span class="logo-icon">🍮</span>
+                    <h3>PudinArt</h3>
+                </div>
+                <p>Pudins artesanais feitos com amor e ingredientes selecionados.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PudinArt. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
