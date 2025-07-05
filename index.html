@@ -17,11 +17,11 @@
             </div>
             <nav class="nav">
                 <a href="#home" onclick="scrollToSection('home')">Início</a>
-                <a href="#produtos" onclick="scrollToSection('produtos')">Sabores</a>
+                <a href="#produtos" onclick="scrollToSection('produtos')">Cardápio</a>
                 <a href="#contato" onclick="scrollToSection('contato')">Contato</a>
             </nav>
             <a href="https://wa.me/5531996004320?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20produto" target="_blank" rel="noopener noreferrer">
-                <button class="btn-primary" onclick="scrollToSection('contato')">Peça Agora <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"></button>
+                <button class="btn-primary" onclick="scrollToSection('contato')" style="font-size: 16px;">Peça Agora <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"></button>
             </a>
         </div>
     </header>
@@ -33,8 +33,8 @@
                 <h2>Pudins Artesanais <span class="highlight">Deliciosos</span></h2>
                 <p>Sabores únicos feitos com carinho e ingredientes selecionados.</p>
                 <div class="hero-buttons">
-                    <button class="btn-primary" onclick="scrollToSection('produtos')">Ver Sabores</button>
-                    <button class="btn-secondary" onclick="scrollToSection('contato')">Fazer Pedido</button>
+                    <button class="btn-primary" onclick="scrollToSection('produtos')">Cardápio</button>
+                    <button class="btn-secondary" onclick="scrollToSection('contato')">Contato</button>
                 </div>
             </div>
             <div class="hero-image">
@@ -54,7 +54,9 @@
                     <p>O clássico cremoso com aquele gostinho especial.</p>
                     <div class="produto-footer">
                         <span class="preco">R$ 8,00</span>
-                        <button class="btn-small" onclick="fazerPedido('Leite Condensado')">Pedir</button>
+                        <a href="https://wa.me/5531996004320?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20o%20produto" target="_blank" rel="noopener noreferrer">
+                            <button class="btn-small" onclick="fazerPedido('Leite Condensado')">Pedir</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -86,7 +88,7 @@
                         </div>
                     </div>
                     <div class="info-item">
-                        <span class="icon">📞</span>
+                        <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon" style="width: 24px; height: 24px;">
                         <div>
                             <strong>Telefone</strong>
                             <p>(31) 9 9600-4320</p>
